@@ -1,16 +1,3 @@
-var myFn = function() {
-  console.log("I am function.");
-}
-
-myFn.someAttribute = 42;
-console.log(myFn.someAttribute);
-
-function runner(f) {
-  f();
-}
-
-runner(myFn);
-
 function findWaldo(arr, found) {
   for (var i = 0; i < arr.length; i++) {
     if (arr[i] === "Waldo") {
@@ -24,3 +11,17 @@ function actionWhenFound(index) {
 }
 
 findWaldo(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound);
+
+function findWaldo2(arr, found) {
+ arr.forEach(function(name){
+    if (name === "Waldo") {
+      found();   // execute callback
+    }
+  });
+}
+
+function actionWhenFound2(index) {
+  console.log("Found Him!");
+}
+
+findWaldo2(["Alice", "Bob", "Waldo", "Winston"], actionWhenFound2);
