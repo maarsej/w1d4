@@ -1,4 +1,4 @@
-var students = [
+ ovar students = [
   { id: 1, name: "bruce",    age: 40 },
   { id: 2, name: "zoidberg", age: 22 },
   { id: 3, name: "alex",     age: 22 },
